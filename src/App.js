@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import Card from './components/Card';
+// import Card from './components/Card';
+import PersonList from './components/PersonList'
 
-const App = ()=> {
+const App = () => {
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
+      <PersonList />
+
     </>
-    
+
   )
 }
 
