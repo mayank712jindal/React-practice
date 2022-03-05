@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Person from './Person';
+import Form from './Form';
 
 const PersonList = () => {
-
-    const [name, setName] = useState("");
-    const [age, setAge] = useState(0);
-    const [work, setWork] = useState("");
 
     const [persons, setPersons] = useState([
         {
@@ -25,39 +22,9 @@ const PersonList = () => {
         },
     ]);
 
-
-
-    const formSubmitHandler = (e) => {
-        e.preventDefault();
-        // ************a normal approach********
-        // setPersons([...persons, { name, age, work }]);
-
-        // ************* a better approack **************
-        setPersons((prevState) => {
-            return [...prevState, { name, age, work }];
-        })
-    }
-
     return (
         <>
-            <div>
-                <form onSubmit={formSubmitHandler}>
-                    <label htmlFor='name'>Name : </label>
-                    <input type="text" id="name" placeholder='Name'
-                        onChange={e => setName(e.target.value)} /><br />
-
-                    <label htmlFor='age'>Age : </label>
-                    <input type="number" id="age" placeholder='Age'
-                        onChange={e => setAge(e.target.value)} /><br />
-
-                    <label htmlFor='work'>Work : </label>
-                    <input type="text" id="work" placeholder='Work'
-                        onChange={e => setWork(e.target.value)} /><br />
-
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-
+            <Form setPerson={setPersons}/>
             {
                 persons.map((data, idx) =>
                     <Person
