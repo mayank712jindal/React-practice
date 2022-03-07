@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 // import Card from './components/Card';
-import PersonList from './components/PersonList'
+// import PersonList from './components/PersonList'
+import Clock from './components/Clock'
 
 const App = () => {
   return (
     <>
-      <PersonList />
-
+      <Clock name="mohan lal" />
     </>
 
   )

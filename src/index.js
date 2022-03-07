@@ -10,3 +10,14 @@ ReactDOM.render(
 );
 
 
+
+/*
+Card.js -  different types of conditional rendering
+
+person /personList - events in React (onChange, onClick, onSubmit)
+
+personList/form - concept of upward Pass/Flow
+
+
+*/
+
