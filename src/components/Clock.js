@@ -1,4 +1,5 @@
 import React from 'react';
+import TempClock from './TempClock'
 
 class Clock extends React.Component {
 
@@ -16,7 +17,8 @@ class Clock extends React.Component {
             a: () => {
                 return this.state.date.toTimeString()
             },
-            name: "anonymous"
+            name: "anonymous",
+            show: true
         }
     }
 
@@ -25,14 +27,25 @@ class Clock extends React.Component {
         return { name: props.name };
     }
 
+    unmountClock = () => {
+        this.setState({ show: false });
+    }
+
+
     // called after the getDerivedStateFromProps method
     render() {
+        let tempClock;
+        if (this.state.show)
+            tempClock = <TempClock />;
+
         return (
             <>
                 <h1>the count of variable is {this.state.count}</h1>
                 <h1>the name of person is {this.state.name}</h1>
                 <h1>{this.state.a()}</h1>
-                {/* <button onClick={this.changeCountValue}>Change count</button> */}
+                <button onClick={this.unmountClock}>Change count</button>
+                {tempClock}
+
             </>
         )
     }
@@ -52,7 +65,7 @@ class Clock extends React.Component {
     // ***********************************************************************************************************
 
     shouldComponentUpdate() {
-        return false;
+        return true;
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
@@ -64,8 +77,5 @@ class Clock extends React.Component {
     }
 }
 
-// *************************************************************************************************************
-// the unmounting stages stages 
-// ***********************************************************************************************************
 
 export default Clock;
