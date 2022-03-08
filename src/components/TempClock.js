@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 export class TempClock extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: "from tempClock",
+        }
+    }
     render() {
         return (
             <h2>

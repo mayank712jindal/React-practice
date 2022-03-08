@@ -20,6 +20,7 @@ class Clock extends React.Component {
             name: "anonymous",
             show: true
         }
+
     }
 
     // called immediate after the constructor
@@ -28,7 +29,8 @@ class Clock extends React.Component {
     }
 
     unmountClock = () => {
-        this.setState({ show: false });
+        this.setState(prevState => ({ show: !prevState.show }));
+        // console.log(this.state.prevSt)
     }
 
 
@@ -45,6 +47,7 @@ class Clock extends React.Component {
                 <h1>{this.state.a()}</h1>
                 <button onClick={this.unmountClock}>Change count</button>
                 {tempClock}
+                {/* {console.log(tempClock)} */}
 
             </>
         )
@@ -69,7 +72,7 @@ class Clock extends React.Component {
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
-        console.log(prevState.a())
+        // console.log(prevState.a())
     }
 
     componentDidUpdate() {
