@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-// import Card from './components/Card';
+import Card from './components/Card';
 // import PersonList from './components/PersonList'
 // import Clock from './components/Clock'
-import CustomHooks from './components/CustomHooks';
+// import CustomHooks from './components/CustomHooks';
+import Movies from './components/Movies';
 
 const App = () => {
   return (
     <>
-      <CustomHooks />
+      <Movies />
+
     </>
 
   )
