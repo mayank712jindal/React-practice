@@ -2,12 +2,13 @@ import React from 'react';
 import './App.css';
 // import Card from './components/Card';
 // import PersonList from './components/PersonList'
-import Clock from './components/Clock'
+// import Clock from './components/Clock'
+import CustomHooks from './components/CustomHooks';
 
 const App = () => {
   return (
     <>
-      <Clock name="mohan lal" />
+      <CustomHooks />
     </>
 
   )
