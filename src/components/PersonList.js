@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Person from './Person';
 import Form from './Form';
 
-const PersonList = () => {
+const PersonList = (props) => {
 
     const [persons, setPersons] = useState([
         {
@@ -24,7 +24,7 @@ const PersonList = () => {
 
     return (
         <>
-            <Form setPerson={setPersons}/>
+            <Form setPerson={setPersons} />
             {
                 persons.map((data, idx) =>
                     <Person

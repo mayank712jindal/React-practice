@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
-// import PersonList from './components/PersonList'
+import PersonList from './components/PersonList'
 // import Clock from './components/Clock'
 // import CustomHooks from './components/CustomHooks';
-import Movies from './components/Movies';
+// import Movies from './components/Movies';
 
+const UserContext = createContext("Mayank123456")
 const App = () => {
+
+  const [name, setName] = useState("MayankJindal");
+
   return (
     <>
-      <Movies />
+      <UserContext.Provider value={name}>
+        <PersonList />
+      </UserContext.Provider>
 
     </>
 
