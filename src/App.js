@@ -6,15 +6,15 @@ import PersonList from './components/PersonList'
 // import CustomHooks from './components/CustomHooks';
 // import Movies from './components/Movies';
 
-const UserContext = createContext("Mayank123456")
+export const UserContext = createContext("Mayank123456")
 const App = () => {
 
-  const [name, setName] = useState("MayankJindal");
+  const [name, setName] = useState("MayankJindadsdsdl");
 
   return (
     <>
       <UserContext.Provider value={name}>
-        <PersonList />
+        <PersonList value={name} />
       </UserContext.Provider>
 
     </>

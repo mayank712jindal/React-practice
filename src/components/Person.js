@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { UserContext } from '../App';
 import './Person.css'
 
 const Person = (props) => {
@@ -12,9 +13,10 @@ const Person = (props) => {
         setName("anonymous")
     }
 
-    
+    const userContext123 = useContext(UserContext);
 
     return (
+
         <>
             <div className="card">
                 {/* <img src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png" alt="avatar" style={{ width: "100%" }} /> */}
@@ -25,12 +27,10 @@ const Person = (props) => {
                     <button onClick={nameChangeHandler}>Change name</button>
                 </div>
             </div>
+            {
+                <h1>{userContext123}</h1>
+            }
 
-            {/* <UserContext.Consumer>
-                {
-                    value => <h1>{value}</h1>
-                }
-            </UserContext.Consumer> */}
         </>
 
     )
