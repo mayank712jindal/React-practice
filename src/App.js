@@ -5,6 +5,7 @@ import PersonList from './components/PersonList'
 // import Clock from './components/Clock'
 // import CustomHooks from './components/CustomHooks';
 // import Movies from './components/Movies';
+import Temp from './components/Temp';
 
 export const UserContext = createContext("Mayank123456")
 const App = () => {
@@ -13,10 +14,18 @@ const App = () => {
 
   return (
     <>
-      <UserContext.Provider value={name}>
+      {/* <UserContext.Provider value={name}>
         <PersonList value={name} />
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      {/* <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card /> */}
+      {/* <Temp name="Mayank" age="20" />
+      <Temp name="Jindal" age="21" /> */}
 
+      <PersonList />
     </>
 
   )

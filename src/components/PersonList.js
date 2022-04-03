@@ -20,18 +20,30 @@ const PersonList = (props) => {
             age: 20,
             work: "business"
         },
+        {
+            name: "anjali",
+            age: 20,
+            work: "developer"
+        },
+        {
+            name: "Sezal",
+            age: 20,
+            work: "programmer"
+        },
+
     ]);
+
 
     return (
         <>
-            <Form setPerson={setPersons} />
+            {/* <Form setPerson={setPersons} /> */}
             {
-                persons.map((data, idx) =>
+                persons.map((data) =>
                     <Person
                         name={data.name}
                         age={data.age}
                         work={data.work}
-                        key={idx}
+                    // key={idx}
                     />)
             }
         </>

@@ -10,7 +10,8 @@ const Person = (props) => {
     // const[varName, changeValueFunc] = useState(initial value to set)
     const [name, setName] = useState(props.name);
     const nameChangeHandler = (event) => {
-        setName("anonymous")
+        let newName = prompt("Enter name")
+        setName(newName)
     }
 
     const userContext123 = useContext(UserContext);
@@ -27,9 +28,9 @@ const Person = (props) => {
                     <button onClick={nameChangeHandler}>Change name</button>
                 </div>
             </div>
-            {
+            {/* {
                 <h1>{userContext123}</h1>
-            }
+            } */}
 
         </>
 

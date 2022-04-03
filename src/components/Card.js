@@ -23,6 +23,7 @@ const Card = () => {
   // ***************returning the default element******************
   return (
     <div className='parentCard'>
+      <h1> Random Number is {randomNumber}</h1>
       <div className="card">
         <img src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png" alt="avatar" style={{ width: "100%" }} />
         <div className="container">
