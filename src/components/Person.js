@@ -4,13 +4,13 @@ import './Person.css'
 
 const Person = (props) => {
 
-    // props.name = "anonymous";  --->>> props are immutable in react
+    // props.name = "anonymous";      --->>> props are immutable in react
 
     // React Hook --> useState
     // const[varName, changeValueFunc] = useState(initial value to set)
     const [name, setName] = useState(props.name);
     const nameChangeHandler = (event) => {
-        let newName = prompt("Enter name")
+        let newName = prompt("Enter name", name)
         setName(newName)
     }
 

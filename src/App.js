@@ -26,6 +26,7 @@ const App = () => {
       <Temp name="Jindal" age="21" /> */}
 
       <PersonList />
+      {/* <Temp /> */}
     </>
 
   )

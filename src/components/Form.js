@@ -9,14 +9,16 @@ const Form = (props) => {
     const formSubmitHandler = (e) => {
         e.preventDefault();
         // ************a normal approach********
-        // setPersons([...persons, { name, age, work }]);
+        // props.setPersons([...props.persons, { name, age, work }]);
 
         // ************* a better approach **************
         // also here we have used the concept of "Upward Pass/Flow" i.e.
         // a function was passed from parent(PersonList.js) as a prop and the Child(Form.js) basically send the values to that function
-        props.setPerson((prevState) => {
+        props.setPersons((prevState) => {
             return [...prevState, { name, age, work }];
         })
+
+        console.log(name, age, work)
     }
 
 

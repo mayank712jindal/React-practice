@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 
 const Temp = (props) => {
-    console.log("rendered")
-    // console.log(props)
-    // useState
-    const [name, setName] = useState(props.name);
 
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
 
-    let nameChangeHandler = () => {
-        console.log("chll to rha hai")
-        let temp = prompt();
-        setName(temp)
+    const formSubmitHandler = (e) => {
+        e.preventDefault();
+        console.log(name, email)
     }
+
     return (
         <>
-            <h1>Hello {name}</h1>
-            <h2>my age is {props.age}</h2>
-            <button onClick={nameChangeHandler}> change message</button>
+            <form onSubmit={formSubmitHandler}>
+                <label htmlFor='name'>Name</label>
+                <input type="text" id="name" placeholder='enter your name'
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <br /><br />
+                <label htmlFor='email'>Email</label>
+                <input type="email" id="email" placeholder='enter email'
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <br />
+                <input type="submit" value="submit" />
+            </form>
         </>
 
     )

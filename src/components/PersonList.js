@@ -36,7 +36,8 @@ const PersonList = (props) => {
 
     return (
         <>
-            {/* <Form setPerson={setPersons} /> */}
+            <Form setPersons={setPersons} />
+
             {
                 persons.map((data) =>
                     <Person
